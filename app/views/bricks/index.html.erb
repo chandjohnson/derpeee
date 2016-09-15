@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<h1>The Great Wall of Shyla</h1>
+<p>
+  Help build a wall between the fat needy hoes and Submitted Joy!
+</p>
+<br>
+<p>
+  <%= link_to 'New Brick', new_brick_path %>
+</p>
+
+<center>
+  <table>
+    <td>
+      <img src="http://i.imgur.com/6gtTOS1.jpg" ></img>
+    </td>
+    <td>
+      <table class="wall">
+        <tbody>
+          <% @bricks.reverse.each do |brick| %>
+            <tr>
+              <td class="brick"><%= brick.string %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </td>
+    <td>
+      <img src="http://i.imgur.com/hZ8kRh9.jpg" width="50%" height="50%"></img>
+    </td>
+  </table>
+</center>
+
+<br>
